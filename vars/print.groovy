@@ -1,9 +1,11 @@
-pipeline {
-    agent any
-    stages {
-        stage('checkout git') {
-            steps {
-                echo "test"
+def call() {
+    pipeline {
+        agent any
+        stages {
+            stage('checkout git') {
+                steps {
+                    echo "test"
+                }
             }
         }
     }
