@@ -4,5 +4,6 @@ import org.library.sayHello
 
 def call(String name = 'human') {
     echo "Bye, ${name}."
-    sayHello 'Zina'
+    def notification = new sayHello()
+    notification 'Zina'
 }
