@@ -3,6 +3,7 @@
 import org.library.sayHello
 
 def call(String name = 'human') {
+
     notification = new sayHello()
 
     pipeline {
@@ -10,7 +11,7 @@ def call(String name = 'human') {
         stages {
             stage('Build') {
                 steps {
-                    echo "Bye, ${name}."
+                    echo(message: "Bye, ${name}")
                     notification 'Zina'
                 }
             }
