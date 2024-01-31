@@ -14,3 +14,6 @@ Add this token to Jenkins
 `Manage Jenkins > System > Global Pipeline Libraries`
 
 
+VSCode Extension:
+Maarti.jenkins-doc
+NicolasVuillamy.vscode-groovy-lint

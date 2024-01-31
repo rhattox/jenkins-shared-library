@@ -3,7 +3,6 @@
 import org.library.sayHello
 
 def call(String name = 'human') {
-
     notification = new sayHello()
 
     pipeline {
