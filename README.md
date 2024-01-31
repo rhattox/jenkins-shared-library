@@ -15,5 +15,9 @@ Add this token to Jenkins
 
 
 VSCode Extension:
+
 Maarti.jenkins-doc
 NicolasVuillamy.vscode-groovy-lint
+
+
+refer this: https://www.jenkins.io/doc/book/pipeline/syntax/
