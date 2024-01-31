@@ -3,7 +3,16 @@
 import org.library.sayHello
 
 def call(String name = 'human') {
-    echo "Bye, ${name}."
-    def notification = new sayHello()
-    notification 'Zina'
+    pipeline {
+        agent any
+        stages {
+            stage('Build') {
+                steps {
+                    cho "Bye, ${name}."
+                    def notification = new sayHello()
+                    notification 'Zina'
+                }
+            }
+        }
+    }
 }
