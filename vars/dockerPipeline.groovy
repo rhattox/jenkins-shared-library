@@ -1,8 +1,9 @@
 #!/usr/bin/env groovy
+import org.library.dockerBuildStage
 
 def call(args) {
+    def dockerVersion = dockerBuildStage()
     pipeline {
-        def dockerVersion = org.library.dockerBuildStage()
         agent any
         options {
             // Timeout counter starts AFTER agent is allocated
