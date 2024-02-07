@@ -10,8 +10,8 @@ def call(String name = 'human') {
         stages {
             stage('Build') {
                 steps {
-                    echo(message: "Bye, ${name}")
-                    notification 'Zina'
+                    echo(message: "Byesdoiahdoisahdla, ${name}")
+                    notification '328765196846587684'
                 }
             }
         }
