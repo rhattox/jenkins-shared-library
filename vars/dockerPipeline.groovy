@@ -2,6 +2,7 @@
 
 def call(args) {
     pipeline {
+        def dockerVersion = org.library.dockerBuildStage()
         agent any
         options {
             // Timeout counter starts AFTER agent is allocated
@@ -16,7 +17,6 @@ def call(args) {
             stage('Docker') {
                 steps {
                     script {
-                        def dockerVersion = org.library.dockerBuildStage()
                         dockerVersion('')
                     }
                 }
