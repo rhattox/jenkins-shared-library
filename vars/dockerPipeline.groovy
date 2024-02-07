@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 
 def call(args) {
+    def dockerVersion = org.library.dockerBuildStage()
     pipeline {
         agent any
         options {
@@ -15,7 +16,7 @@ def call(args) {
             }
             stage('Docker') {
                 steps {
-                    sh 'docker --version'
+                    dockerVersion.getDockerVersion()
                 }
             }
         }
