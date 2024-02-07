@@ -2,5 +2,5 @@
 package org.library
 
 def call() {
-    sh(script: 'pwd')
+    echo(message: "Hello")
 }
