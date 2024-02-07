@@ -10,7 +10,7 @@ def call() {
         stages {
             stage('Build') {
                 steps {
-                    notification
+                    notification.call()
                 }
             }
         }
