@@ -2,7 +2,7 @@
 
 import org.library.dockerBuildStage
 
-def call() {
+def dockerPipeline(args) {
     dockerBuildStageFunc = new dockerBuildStage()
 
     pipeline {
