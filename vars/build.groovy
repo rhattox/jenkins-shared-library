@@ -3,14 +3,14 @@
 import org.library.dockerBuild
 
 def call() {
-    dockerbuild = new dockerBuild()
+    docker_build = new dockerBuild()
 
     pipeline {
         agent any
         stages {
             stage('Build') {
                 steps {
-                    dockerbuild
+                    docker_build
                 }
             }
         }
