@@ -2,7 +2,7 @@
 import org.library.dockerBuildStage
 
 def call(args) {
-    def dockerVersion = dockerBuildStage()
+    def dockerVersion = new dockerBuildStage()
     pipeline {
         agent any
         options {
