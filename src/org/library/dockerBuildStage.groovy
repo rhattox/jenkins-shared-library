@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 package org.library
+
 def call(String name = 'human') {
-    echo "Bye, ${name}."
+    echo(message: "building it NOWWWWW, ${name}")
 }

@@ -1,16 +1,16 @@
 #!/usr/bin/env groovy
 
-import org.library.dockerBuild
+import org.library.dockerBuildStage
 
 def call(String name = 'human') {
-    build_docker_image = new dockerBuild()
+    dockerBuildStageFunc = new dockerBuildStage()
 
     pipeline {
         agent any
         stages {
             stage('Build') {
                 steps {
-                    build_docker_image ''
+                    dockerBuildStageFunc '5555'
                 }
             }
         }
