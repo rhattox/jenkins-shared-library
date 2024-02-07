@@ -2,5 +2,5 @@
 package org.library
 
 def call() {
-    echo(message: "Hello")
+    echo(message: 'Hello')
 }
