@@ -2,7 +2,7 @@
 
 import org.library.dockerBuild
 
-def call() {
+def call(String name = 'human') {
     build_docker_image = new dockerBuild()
 
     pipeline {
