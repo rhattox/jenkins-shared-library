@@ -8,7 +8,9 @@ def call(args) {
         stages {
             stage('Build') {
                 steps {
-                    dockerBuildStageFunc.buildDockerStage('5555')
+                    script(
+                        dockerBuildStageFunc.buildDockerStage('5555')
+                    )
                 }
             }
         }
