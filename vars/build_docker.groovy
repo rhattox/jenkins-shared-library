@@ -3,14 +3,14 @@
 import org.library.dockerBuild
 
 def call() {
-    notification = new dockerBuild()
+    build_docker_image = new dockerBuild()
 
     pipeline {
         agent any
         stages {
             stage('Build') {
                 steps {
-                    notification.call()
+                    build_docker_image ''
                 }
             }
         }
