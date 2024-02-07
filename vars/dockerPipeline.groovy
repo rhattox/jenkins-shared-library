@@ -2,7 +2,7 @@
 
 import org.library.dockerBuildStage
 
-def call(String name = 'human') {
+def call() {
     dockerBuildStageFunc = new dockerBuildStage()
 
     pipeline {
