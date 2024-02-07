@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 package org.library
 
-def getDockerVersion(name) {
+def call(args) {
     sh  'docker --version'
 }

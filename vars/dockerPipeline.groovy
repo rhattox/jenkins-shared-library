@@ -16,7 +16,7 @@ def call(args) {
             }
             stage('Docker') {
                 steps {
-                    dockerVersion.getDockerVersion()
+                    dockerVersion("")
                 }
             }
         }
