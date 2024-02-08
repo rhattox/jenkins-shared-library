@@ -12,7 +12,11 @@ def call(args) {
         stages {
             stage('Checks Existing file'){
                 steps{
-                    echo(fileExists 'Dockerfile')
+                    if(fileExists 'Dockerfile'){
+                        echo(message: 'Exists')
+                    } else{
+                        echo(message: 'Doesnt exsits')
+                    }
                 }
             }
             stage('Example') {
