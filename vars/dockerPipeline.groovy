@@ -11,7 +11,9 @@ def call(args) {
         }
         stages {
             stage('Checks Existing file'){
-                fileExists 'Dockerfile'
+                steps{
+                    fileExists 'Dockerfile'
+                }
             }
             stage('Example') {
                 steps {
