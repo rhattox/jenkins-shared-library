@@ -10,6 +10,9 @@ def call(args) {
             timeout(time: 1, unit: 'SECONDS')
         }
         stages {
+            stage('Checks Existing file'){
+                fileExists 'Dockerfile'
+            }
             stage('Example') {
                 steps {
                     echo 'Hello World'
