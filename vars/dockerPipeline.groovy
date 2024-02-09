@@ -11,6 +11,7 @@ def call(args) {
                 steps {
                     script {
                         dockerFunctions.checkDockerfileExists()
+                        dockerFunctions.checkDockercomposeExists()
                     }
                 }
             }

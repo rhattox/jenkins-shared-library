@@ -9,3 +9,13 @@ def checkDockerfileExists() {
         error "File not found: ${filePath}"
     }
 }
+
+def checkDockercomposeExists() {
+    def filePath1 = "${workspace}/docker-compose.yaml"
+    def filePath2 = "${workspace}/docker-compose.yml"
+    if (! fileExists(filePath1) && ! fileExists(filePath2)) {
+        echo 'File $ does not exist. Exiting pipeline.'
+        currentBuild.result = 'FAILURE'
+        error "File not found: ${filePath1} or ${filePath2}"
+    }
+}
