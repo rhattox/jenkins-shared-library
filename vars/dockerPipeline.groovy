@@ -15,15 +15,10 @@ def call(args) {
                     }
                 }
             }
-            stage('Example') {
-                steps {
-                    echo 'Hello World'
-                }
-            }
-            stage('Docker') {
+            stage('Docker BUild') {
                 steps {
                     script {
-                        dockerVersion('')
+                        dockerFunctions.dockerBuildImage()
                     }
                 }
             }

@@ -19,3 +19,13 @@ def checkDockercomposeExists() {
         error "File not found: ${filePath1} or ${filePath2}"
     }
 }
+
+def dockerBuildImage() {
+    def filePath1 = "${workspace}/docker-compose.yaml"
+    def filePath2 = "${workspace}/docker-compose.yml"
+    if (fileExists(filePath1)) {
+        sh(script: 'docker compose build -f ${filePath1}')
+    } else {
+        sh(script: 'docker compose build -f ${filePath2}')
+    }
+}
