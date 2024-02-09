@@ -21,6 +21,7 @@ def checkDockercomposeExists() {
 }
 
 def dockerBuildImage() {
+    sh(script: "whoami")
     def filePath1 = "${workspace}/docker-compose.yaml"
     def filePath2 = "${workspace}/docker-compose.yml"
     if (fileExists(filePath1)) {
