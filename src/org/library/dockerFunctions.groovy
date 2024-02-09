@@ -24,8 +24,8 @@ def dockerBuildImage() {
     def filePath1 = "${workspace}/docker-compose.yaml"
     def filePath2 = "${workspace}/docker-compose.yml"
     if (fileExists(filePath1)) {
-        sh(script: 'docker compose -f ${filePath1} build')
+        sh(script: "docker compose -f ${filePath1} build")
     } else {
-        sh(script: 'docker compose -f ${filePath2} build')
+        sh(script: "docker compose -f ${filePath2} build")
     }
 }

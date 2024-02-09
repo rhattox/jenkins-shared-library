@@ -15,7 +15,7 @@ def call(args) {
                     }
                 }
             }
-            stage('Docker BUild') {
+            stage('Docker Build') {
                 steps {
                     script {
                         dockerFunctions.dockerBuildImage()
