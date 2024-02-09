@@ -25,7 +25,7 @@ def dockerBuildImage() {
     def filePath1 = "${workspace}/docker-compose.yaml"
     def filePath2 = "${workspace}/docker-compose.yml"
     if (fileExists(filePath1)) {
-        sh(script: "docker build -t rhattox.zapto.org/node-bill-manager .")
+       docker.build('my-image:latest')
     } else {
         sh(script: "docker compose -f ${filePath2} build")
     }
