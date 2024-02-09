@@ -2,5 +2,10 @@
 package org.library
 
 def call(args) {
-    sh  'docker --version'
+    def filePath = "${workspace}/Dockerfile"
+    if (!fileExists(filePath)) {
+        echo 'File does not exist. Exiting pipeline.'
+        currentBuild.result = 'FAILURE'
+        error "File not found: ${filePath}"
+    }
 }

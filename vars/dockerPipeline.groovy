@@ -6,19 +6,12 @@ def call(args) {
 
     pipeline {
         agent any
-        options {
-            timeout(time: 1, unit: 'SECONDS')
-        }
         stages {
             stage('Checks Existing file') {
                 steps {
                     script {
-                        def filePath = "${workspace}/Dockerfile"
-                        if (!fileExists(filePath)) {
-                            echo 'File does not exist. Exiting pipeline.'
-                            currentBuild.result = 'ABORTED'
-                            error "File not found: ${filePath}"
-                        }
+                        def myStage = load 'dockerBuildStage.groovy'
+                        myStage.call()
                     }
                 }
             }
