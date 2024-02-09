@@ -10,8 +10,7 @@ def call(args) {
             stage('Checks Existing file') {
                 steps {
                     script {
-                        def myStage = load 'src/org/library/dockerBuildStage.groovy'
-                        myStage.call()
+                        dockerVersion.call()
                     }
                 }
             }
