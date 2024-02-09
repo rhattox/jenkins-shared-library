@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 package org.library
 
-def call(args) {
+def checkDockerfileExists(args) {
     def filePath = "${workspace}/Dockerfile"
     if (!fileExists(filePath)) {
         echo 'File does not exist. Exiting pipeline.'

@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
-import org.library.dockerBuildStage
+import org.library.dockerFunctions
 
 def call(args) {
-    def dockerVersion = new dockerBuildStage()
+    def dockerFunctions = new dockerFunctions()
 
     pipeline {
         agent any
@@ -10,7 +10,7 @@ def call(args) {
             stage('Checks Existing file') {
                 steps {
                     script {
-                        dockerVersion.call()
+                        dockerFunctions.checkDockerfileExists()
                     }
                 }
             }
